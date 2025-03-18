@@ -1,0 +1,33 @@
+[project]
+name = "reality_synchronization"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jan Dalheimer", email = "jan.dalheimer@sweco.se" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "geoalchemy2>=0.17.1",
+    "geopandas>=1.0.1",
+    "psycopg[binary]>=3.2.6",
+    "pyarrow>=19.0.1",
+    "pyogrio>=0.10.0",
+    "pypgstac[psycopg]>=0.9.5",
+    "pystac-client>=0.8.6",
+    "requests-oauthlib>=2.0.0",
+]
+
+[project.optional-dependencies]
+windmill = [
+    "wmill>=1.477.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.0",
+]
